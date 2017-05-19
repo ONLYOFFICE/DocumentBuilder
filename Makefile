@@ -64,7 +64,7 @@ HTML_FILE_INTERNAL := HtmlFileInternal
 HTML_FILE_INTERNAL_FILES += core/build/lib/$(TARGET)/HtmlFileInternal$(EXEC_EXT)
 HTML_FILE_INTERNAL_FILES += core/Common/3dParty/cef/$(TARGET)/build/**
 
-FOLDERS += sdkjs/deploy/sdkjs
+FOLDERS += web-apps/deploy/sdkjs
 FOLDERS += empty
 FOLDERS += samples
 

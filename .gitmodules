@@ -4,3 +4,6 @@
 [submodule "sdkjs"]
 	path = sdkjs
 	url = https://github.com/ONLYOFFICE/sdkjs.git
+[submodule "web-apps"]
+	path = web-apps
+	url = git@github.com:ONLYOFFICE/web-apps.git
