@@ -60,6 +60,8 @@ BINARY_FILES += core/build/bin/$(TARGET)/x2t$(EXEC_EXT)
 #TODO Build docbuilder
 BINARY_FILES += core/build/bin/$(TARGET)/docbuilder$(EXEC_EXT)
 
+BINARY_FILES += DoctRenderer.config
+
 HTML_FILE_INTERNAL := HtmlFileInternal
 HTML_FILE_INTERNAL_FILES += core/build/lib/$(TARGET)/HtmlFileInternal$(EXEC_EXT)
 HTML_FILE_INTERNAL_FILES += core/Common/3dParty/cef/$(TARGET)/build/**
