@@ -68,6 +68,8 @@ FOLDERS += web-apps/deploy/sdkjs
 FOLDERS += empty
 FOLDERS += samples
 
+JQUERY += web-apps/deploy/web-apps/vendor/jquery
+
 #TODO REFACTORING FILE PATH
 INCLUDE_FILES += core/DesktopEditor/doctrenderer/docbuilder.h
 INCLUDE_FILES += core/DesktopEditor/common/base_export.h
@@ -84,6 +86,8 @@ $(PACKAGE):
 	mkdir -p $(PACKAGE)/$(HTML_FILE_INTERNAL)
 	cp -r -t $(PACKAGE)/$(HTML_FILE_INTERNAL) $(HTML_FILE_INTERNAL_FILES)
 	cp -r -t $(PACKAGE) $(FOLDERS)
+	mkdir -p $(PACKAGE)/sdkjs/vendor
+	cp -r -t $(PACKAGE)/sdkjs/vendor $(JQUERY)
 	mkdir -p $(PACKAGE)/include
 	cp -t $(PACKAGE)/include $(INCLUDE_FILES)
 
