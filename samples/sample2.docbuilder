@@ -1,0 +1,16 @@
+builder.OpenFile("./TESTFILES/sample1.docx", "");
+
+var Api = editor;
+
+var oRun;
+var oDocument = Api.GetDocument();
+var oParagraph = oDocument.GetElement(0);
+oParagraph.SetJc("left");
+
+var oRun = oParagraph.AddText("This text was added by ONLYOFFICE Document Builder ");
+oRun.AddLineBreak();
+oRun.AddText("after it opened the created document.");
+oRun.SetColor(255, 255, 255);
+
+builder.SaveFile("docx", "./TESTFILES/sample2.docx");
+builder.CloseFile();

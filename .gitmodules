@@ -1,0 +1,6 @@
+[submodule "core"]
+	path = core
+	url = https://github.com/ONLYOFFICE/core.git
+[submodule "sdkjs"]
+	path = sdkjs
+	url = https://github.com/ONLYOFFICE/sdkjs.git

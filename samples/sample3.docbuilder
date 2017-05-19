@@ -1,0 +1,3 @@
+builder.OpenFile("TestFiles/sample1.docx", "");
+builder.SaveFile("pdf", "./TESTFILES/sample3.pdf");
+builder.CloseFile();
