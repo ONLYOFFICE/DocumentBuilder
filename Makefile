@@ -99,5 +99,5 @@ clean:
 %-$(ARCH_SUFFIX).tar.gz : %
 	tar -zcvf $@ $<
 
-%.zip : %
+%-$(ARCH_SUFFIX).zip : %
 	7z a -y $@ $<
