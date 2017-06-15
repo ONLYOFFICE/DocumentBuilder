@@ -8,14 +8,6 @@ ifeq ($(OS),Windows_NT)
     EXEC_EXT := .exe
     SHARED_EXT := .dll
     ARCH_EXT := .zip
-    ifeq ($(PROCESSOR_ARCHITECTURE),AMD64)
-        ARCHITECTURE := 64
-        ARCH_SUFFIX := x64
-    endif
-    ifeq ($(PROCESSOR_ARCHITECTURE),x86)
-        ARCHITECTURE := 32
-        ARCH_SUFFIX := x86
-    endif
 else
     UNAME_S := $(shell uname -s)
     ifeq ($(UNAME_S),Linux)
@@ -23,15 +15,16 @@ else
         SHARED_EXT := .so*
         ARCH_EXT := .tar.gz
     endif
-    UNAME_P := $(shell uname -p)
-    ifeq ($(UNAME_P),x86_64)
-        ARCHITECTURE := 64
-        ARCH_SUFFIX := x64
-    endif
-    ifneq ($(filter %86,$(UNAME_P)),)
-        ARCH_SUFFIX := x86
-        ARCHITECTURE := 32
-    endif
+endif
+
+UNAME_M := $(shell uname -m)
+ifeq ($(UNAME_M),x86_64)
+	ARCHITECTURE := 64
+	ARCH_SUFFIX := x64
+endif
+ifneq ($(filter %86,$(UNAME_M)),)
+	ARCHITECTURE := 32
+	ARCH_SUFFIX := x86
 endif
 
 PACKAGE_NAME := $(PRODUCT_NAME)-$(PRODUCT_VERSION)
