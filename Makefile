@@ -37,7 +37,17 @@ ARCHIVE := $(OUTPUT)/$(ARCHIVE_NAME)
 
 TARGET := $(PLATFORM)_$(ARCHITECTURE)
 
-BINARY_FILES += core/build/lib/$(TARGET)/*$(SHARED_EXT)
+#BINARY_FILES += core/build/lib/$(TARGET)/*$(SHARED_EXT)
+
+BINARY_FILES += core/build/lib/$(TARGET)/DjVuFile$(SHARED_EXT)
+BINARY_FILES += core/build/lib/$(TARGET)/doctrenderer$(SHARED_EXT)
+#BINARY_FILES += core/build/lib/$(TARGET)/doctrenderer.lib 
+BINARY_FILES += core/build/lib/$(TARGET)/HtmlFile$(SHARED_EXT)
+BINARY_FILES += core/build/lib/$(TARGET)/HtmlRenderer$(SHARED_EXT)
+BINARY_FILES += core/build/lib/$(TARGET)/PdfReader$(SHARED_EXT)
+BINARY_FILES += core/build/lib/$(TARGET)/PdfWriter$(SHARED_EXT)
+BINARY_FILES += core/build/lib/$(TARGET)/XpsFile$(SHARED_EXT)
+BINARY_FILES += core/build/lib/$(TARGET)/UnicodeConverter$(SHARED_EXT)
 
 ifeq ($(PLATFORM),linux)
 BINARY_FILES += core/Common/3dParty/icu/$(TARGET)/build/libicudata$(SHARED_EXT)
