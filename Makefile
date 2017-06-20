@@ -68,6 +68,7 @@ FOLDERS += empty
 FOLDERS += samples
 
 JQUERY += web-apps/deploy/web-apps/vendor/jquery
+XREGEXP += web-apps/deploy/web-apps/vendor/xregexp
 
 #TODO REFACTORING FILE PATH
 INCLUDE_FILES += core/DesktopEditor/doctrenderer/docbuilder.h
@@ -86,7 +87,7 @@ $(PACKAGE):
 	cp -r -t $(PACKAGE)/$(HTML_FILE_INTERNAL) $(HTML_FILE_INTERNAL_FILES)
 	cp -r -t $(PACKAGE) $(FOLDERS)
 	mkdir -p $(PACKAGE)/sdkjs/vendor
-	cp -r -t $(PACKAGE)/sdkjs/vendor $(JQUERY)
+	cp -r -t $(PACKAGE)/sdkjs/vendor $(JQUERY) $(XREGEXP)
 	mkdir -p $(PACKAGE)/include
 	cp -t $(PACKAGE)/include $(INCLUDE_FILES)
 
