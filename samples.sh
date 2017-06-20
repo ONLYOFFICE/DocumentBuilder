@@ -5,8 +5,8 @@ SCRIPTPATH=$(dirname "$SCRIPT")
 
 cd "$SCRIPTPATH"
 
-for entry in "./samples"/*
+for i in "./samples"/*
 do
-echo "run $entry..."
-./docbuilder "$entry"
+echo "run $i..."
+./docbuilder "$i"
 done
