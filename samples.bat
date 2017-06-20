@@ -6,4 +6,7 @@ cd %~dp0
 
 if not exist %SAMPLES_PATH% mkdir %SAMPLES_PATH%
 
-for /r %%i in (samples\*.docbuilder) do docbuilder.exe "%%i"
+for /r %%i in (samples\*.docbuilder) do (
+  echo run %%~nxi...
+  docbuilder.exe "%%i"
+)
