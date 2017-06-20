@@ -6,12 +6,14 @@ PRODUCT_VERSION ?= 0.0.0
 ifeq ($(OS),Windows_NT)
     PLATFORM := win
     EXEC_EXT := .exe
+    SCRIPT_EXT := .bat
     SHARED_EXT := .dll
     ARCH_EXT := .zip
 else
     UNAME_S := $(shell uname -s)
     ifeq ($(UNAME_S),Linux)
         PLATFORM := linux
+	SCRIPT_EXT := .sh
         SHARED_EXT := .so*
         ARCH_EXT := .tar.gz
     endif
@@ -54,6 +56,8 @@ BINARY_FILES += core/build/bin/$(TARGET)/x2t$(EXEC_EXT)
 BINARY_FILES += core/build/bin/$(TARGET)/docbuilder$(EXEC_EXT)
 
 BINARY_FILES += DoctRenderer.config
+
+BINARY_FILES += samples$(SCRIPT_EXT)
 
 HTML_FILE_INTERNAL := HtmlFileInternal
 HTML_FILE_INTERNAL_FILES += core/build/lib/$(TARGET)/HtmlFileInternal$(EXEC_EXT)
