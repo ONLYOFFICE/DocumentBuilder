@@ -14,7 +14,7 @@ else
     ifeq ($(UNAME_S),Linux)
         PLATFORM := linux
 	SCRIPT_EXT := .sh
-        SHARED_EXT := .so
+        SHARED_EXT := .so*
 	LIB_PREFFIX := lib
         ARCH_EXT := .tar.gz
     endif
