@@ -63,8 +63,8 @@ BINARY_FILES += core/Common/3dParty/v8/$(TARGET)/release/icudt.dll
 endif
 
 BINARY_FILES += core/build/bin/$(TARGET)/x2t$(EXEC_EXT)
-#TODO Build docbuilder
 BINARY_FILES += core/build/bin/$(TARGET)/docbuilder$(EXEC_EXT)
+BINARY_FILES += core/build/bin/$(TARGET)/registration$(EXEC_EXT)
 
 BINARY_FILES += DoctRenderer.config
 
