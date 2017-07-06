@@ -104,8 +104,10 @@ $(PACKAGE):
 	cp -r -t $(PACKAGE)/sdkjs/vendor $(JQUERY) $(XREGEXP)
 	mkdir -p $(PACKAGE)/include
 	cp -t $(PACKAGE)/include $(INCLUDE_FILES)
+ifeq ($(PLATFORM),win)
 	mkdir -p $(PACKAGE)/wrappers
 	cp -t $(PACKAGE)/wrappers $(WRAPPERS_FILES)
+endif
 
 clean:
 	rm -fr $(PACKAGE) $(ARCHIVE)
