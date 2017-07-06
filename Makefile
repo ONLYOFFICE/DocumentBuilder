@@ -74,6 +74,9 @@ XREGEXP += web-apps/deploy/web-apps/vendor/xregexp
 INCLUDE_FILES += core/DesktopEditor/doctrenderer/docbuilder.h
 INCLUDE_FILES += core/DesktopEditor/common/base_export.h
 
+WRAPPERS_FILES += core/build/lib/$(TARGET)/docbuilder.com.dll
+WRAPPERS_FILES += core/build/lib/$(TARGET)/docbuilder.net.dll
+
 .PHONY: all clean
 
 all: $(ARCHIVE)
@@ -90,6 +93,8 @@ $(PACKAGE):
 	cp -r -t $(PACKAGE)/sdkjs/vendor $(JQUERY) $(XREGEXP)
 	mkdir -p $(PACKAGE)/include
 	cp -t $(PACKAGE)/include $(INCLUDE_FILES)
+	mkdir -p $(PACKAGE)/wrappers
+	cp -t $(PACKAGE)/wrappers $(WRAPPERS_FILES)
 
 clean:
 	rm -fr $(PACKAGE) $(ARCHIVE)
