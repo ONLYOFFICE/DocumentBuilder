@@ -8,33 +8,27 @@ ifeq ($(OS),Windows_NT)
     EXEC_EXT := .exe
     SCRIPT_EXT := .bat
     SHARED_EXT := .dll
-    ARCH_EXT := .zip
 else
     UNAME_S := $(shell uname -s)
     ifeq ($(UNAME_S),Linux)
         PLATFORM := linux
-	SCRIPT_EXT := .sh
+        SCRIPT_EXT := .sh
         SHARED_EXT := .so*
-	LIB_PREFFIX := lib
-        ARCH_EXT := .tar.gz
+        LIB_PREFFIX := lib
     endif
 endif
 
 UNAME_M := $(shell uname -m)
 ifeq ($(UNAME_M),x86_64)
 	ARCHITECTURE := 64
-	ARCH_SUFFIX := x64
 endif
 ifneq ($(filter %86,$(UNAME_M)),)
 	ARCHITECTURE := 32
-	ARCH_SUFFIX := x86
 endif
 
 PACKAGE_NAME := $(PRODUCT_NAME)-$(PRODUCT_VERSION)
-ARCHIVE_NAME := $(PACKAGE_NAME)-$(ARCH_SUFFIX)$(ARCH_EXT)
 
 PACKAGE := $(OUTPUT)/$(PACKAGE_NAME)
-ARCHIVE := $(OUTPUT)/$(ARCHIVE_NAME)
 
 TARGET := $(PLATFORM)_$(ARCHITECTURE)
 
@@ -90,9 +84,7 @@ WRAPPERS_FILES += core/build/lib/$(TARGET)/docbuilder.net.dll
 
 .PHONY: all clean
 
-all: $(ARCHIVE)
-
-$(ARCHIVE): $(PACKAGE)
+all: $(PACKAGE)
 
 $(PACKAGE):
 	mkdir -p $(PACKAGE)
@@ -110,10 +102,4 @@ ifeq ($(PLATFORM),win)
 endif
 
 clean:
-	rm -fr $(PACKAGE) $(ARCHIVE)
-
-%-$(ARCH_SUFFIX).tar.gz : %
-	tar -zcvf $@ $<
-
-%-$(ARCH_SUFFIX).zip : %
-	7z a -y $@ $<
+	rm -fr $(PACKAGE)
