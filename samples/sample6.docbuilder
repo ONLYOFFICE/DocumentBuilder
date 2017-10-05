@@ -78,8 +78,7 @@ oParagraph.SetJc('right');
 oParagraph.SetSpacingBefore(0, undefined);
 oParagraph.SetSpacingAfter(0, undefined);
 oContent.Push(oParagraph);
-var oRun = oParagraph.AddText('put a tomahawk 
-on the ground in the ');
+var oRun = oParagraph.AddText('put a tomahawk on the ground in the ');
 oRun.SetFill(Api.CreateSolidFill(Api.CreateRGBColor(0xff, 0xff, 0xff)));
 oRun.SetFontSize(84);
 oRun.SetFontFamily('Georgia');
