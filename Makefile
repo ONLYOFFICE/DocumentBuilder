@@ -47,7 +47,6 @@ BINARY_FILES += core/build/lib/$(TARGET)/$(LIB_PREFFIX)UnicodeConverter$(SHARED_
 ifeq ($(PLATFORM),linux)
 BINARY_FILES += core/Common/3dParty/icu/$(TARGET)/build/libicudata$(SHARED_EXT)
 BINARY_FILES += core/Common/3dParty/icu/$(TARGET)/build/libicuuc$(SHARED_EXT)
-BINARY_FILES += core/Common/3dParty/v8/$(TARGET)/icudtl_dat.S
 endif
 
 ifeq ($(PLATFORM),win)
