@@ -50,8 +50,8 @@ BINARY_FILES += core/Common/3dParty/icu/$(TARGET)/build/libicuuc$(SHARED_EXT)
 endif
 
 ifeq ($(PLATFORM),win)
-BINARY_FILES += core/Common/3dParty/icu/$(TARGET)/build/icudt55$(SHARED_EXT)
-BINARY_FILES += core/Common/3dParty/icu/$(TARGET)/build/icuuc55$(SHARED_EXT)
+BINARY_FILES += core/Common/3dParty/icu/$(TARGET)/build/icudt*$(SHARED_EXT)
+BINARY_FILES += core/Common/3dParty/icu/$(TARGET)/build/icuuc*$(SHARED_EXT)
 BINARY_FILES += core/Common/3dParty/v8/$(TARGET)/release/icudt.dll
 endif
 
