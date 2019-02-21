@@ -37,7 +37,11 @@ TARGET := $(PLATFORM)_$(ARCHITECTURE)
 BINARY_FILES += core/build/lib/$(TARGET)/$(LIB_PREFFIX)graphics$(SHARED_EXT)
 BINARY_FILES += core/build/lib/$(TARGET)/$(LIB_PREFFIX)kernel$(SHARED_EXT)
 BINARY_FILES += core/build/lib/$(TARGET)/$(LIB_PREFFIX)DjVuFile$(SHARED_EXT)
+ifeq ($(LICENSE),commercial)
+BINARY_FILES += core/build/lib/$(TARGET)/docbuilder/$(LIB_PREFFIX)doctrenderer$(SHARED_EXT)
+else
 BINARY_FILES += core/build/lib/$(TARGET)/$(LIB_PREFFIX)doctrenderer$(SHARED_EXT)
+endif
 BINARY_FILES += core/build/lib/$(TARGET)/$(LIB_PREFFIX)HtmlFile$(SHARED_EXT)
 BINARY_FILES += core/build/lib/$(TARGET)/$(LIB_PREFFIX)HtmlRenderer$(SHARED_EXT)
 BINARY_FILES += core/build/lib/$(TARGET)/$(LIB_PREFFIX)PdfReader$(SHARED_EXT)
