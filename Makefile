@@ -60,7 +60,7 @@ BINARY_FILES += core/build/bin/$(TARGET)/x2t$(EXEC_EXT)
 BINARY_FILES += core/build/bin/$(TARGET)/docbuilder$(EXEC_EXT)
 
 ifeq ($(LICENSE),commercial)
-BINARY_FILES += core/build/bin/$(TARGET)/registration$(EXEC_EXT)
+#BINARY_FILES += core/build/bin/$(TARGET)/registration$(EXEC_EXT)
 endif
 
 BINARY_FILES += DoctRenderer.config
