@@ -4,7 +4,6 @@ COMPANY_NAME ?= onlyoffice
 PRODUCT_NAME ?= documentbuilder
 PRODUCT_VERSION ?= 0.0.0
 
-LICENSE ?= commercial
 PACKAGE_EDITION ?= normal
 
 ifeq ($(OS),Windows_NT)
@@ -37,11 +36,7 @@ TARGET := $(PLATFORM)_$(ARCHITECTURE)
 BINARY_FILES += core/build/lib/$(TARGET)/$(LIB_PREFFIX)graphics$(SHARED_EXT)
 BINARY_FILES += core/build/lib/$(TARGET)/$(LIB_PREFFIX)kernel$(SHARED_EXT)
 BINARY_FILES += core/build/lib/$(TARGET)/$(LIB_PREFFIX)DjVuFile$(SHARED_EXT)
-ifeq ($(LICENSE),commercial)
-BINARY_FILES += core/build/lib/$(TARGET)/docbuilder/$(LIB_PREFFIX)doctrenderer$(SHARED_EXT)
-else
 BINARY_FILES += core/build/lib/$(TARGET)/$(LIB_PREFFIX)doctrenderer$(SHARED_EXT)
-endif
 BINARY_FILES += core/build/lib/$(TARGET)/$(LIB_PREFFIX)HtmlFile$(SHARED_EXT)
 BINARY_FILES += core/build/lib/$(TARGET)/$(LIB_PREFFIX)HtmlRenderer$(SHARED_EXT)
 BINARY_FILES += core/build/lib/$(TARGET)/$(LIB_PREFFIX)PdfReader$(SHARED_EXT)
@@ -62,10 +57,6 @@ endif
 
 BINARY_FILES += core/build/bin/$(TARGET)/x2t$(EXEC_EXT)
 BINARY_FILES += core/build/bin/$(TARGET)/docbuilder$(EXEC_EXT)
-
-ifeq ($(LICENSE),commercial)
-#BINARY_FILES += core/build/bin/$(TARGET)/registration$(EXEC_EXT)
-endif
 
 BINARY_FILES += DoctRenderer.config
 
@@ -94,10 +85,6 @@ WRAPPERS_FILES += core/build/lib/$(TARGET)/docbuilder.net.dll
 all:
 	cd core/Common/3dParty/ && ./make.sh
 	cd core && $(MAKE) all ext
-
-ifeq ($(LICENSE),commercial)
-	cd core-ext && $(MAKE)
-endif
 
 	cd sdkjs && $(MAKE)
 	
