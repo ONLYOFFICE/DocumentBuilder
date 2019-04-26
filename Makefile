@@ -52,7 +52,7 @@ endif
 ifeq ($(PLATFORM),win)
 BINARY_FILES += core/Common/3dParty/icu/$(TARGET)/build/icudt*$(SHARED_EXT)
 BINARY_FILES += core/Common/3dParty/icu/$(TARGET)/build/icuuc*$(SHARED_EXT)
-BINARY_FILES += core/Common/3dParty/v8/$(TARGET)/release/icudt.dll
+BINARY_FILES += core/Common/3dParty/v8/v8/out.gn/$(TARGET)/release/icudtl.dat
 endif
 
 BINARY_FILES += core/build/bin/$(TARGET)/x2t$(EXEC_EXT)
