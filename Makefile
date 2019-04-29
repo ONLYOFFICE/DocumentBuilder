@@ -1,4 +1,5 @@
 OUTPUT := ./
+CURL := curl -L -o
 
 COMPANY_NAME ?= onlyoffice
 PRODUCT_NAME ?= documentbuilder
@@ -77,10 +78,16 @@ XREGEXP += web-apps/deploy/web-apps/vendor/xregexp
 INCLUDE_FILES += core/DesktopEditor/doctrenderer/docbuilder.h
 INCLUDE_FILES += core/DesktopEditor/common/base_export.h
 
-WRAPPERS_FILES += core/build/lib/$(TARGET)/docbuilder.com.dll
-WRAPPERS_FILES += core/build/lib/$(TARGET)/docbuilder.net.dll
+DOCBUILDER_COM := core/build/lib/$(TARGET)/docbuilder.com.dll
+DOCBUILDER_NET := core/build/lib/$(TARGET)/docbuilder.net.dll
 
 .PHONY: all install uninstall
+
+$(DOCBUILDER_COM):
+	$(CURL) $(DOCBUILDER_COM) http://d2ettrnqo7v976.cloudfront.net/wrappers/$(TARGET)/docbuilder.com.dll
+	
+$(DOCBUILDER_NET):
+	$(CURL) $(DOCBUILDER_NET) http://d2ettrnqo7v976.cloudfront.net/wrappers/$(TARGET)/docbuilder.net.dll
 
 all:
 	cd core/Common/3dParty/ && ./make.sh
@@ -93,7 +100,7 @@ clean:
 	cd core-ext && $(MAKE) clean
 	cd sdkjs &&  $(MAKE) clean
 
-install:
+install: $(DOCBUILDER_COM) $(DOCBUILDER_NET)
 	mkdir -p $(DEST_DIR)
 	cp -t $(DEST_DIR) $(BINARY_FILES)
 ifneq ($(PLATFORM),mac)
@@ -107,7 +114,7 @@ endif
 	cp -t $(DEST_DIR)/include $(INCLUDE_FILES)
 ifeq ($(PLATFORM),win)
 	mkdir -p $(DEST_DIR)/wrappers
-	cp -t $(DEST_DIR)/wrappers $(WRAPPERS_FILES)
+	cp -t $(DEST_DIR)/wrappers $(DOCBUILDER_COM) $(DOCBUILDER_NET)
 endif
 
 ifeq ($(PACKAGE_EDITION),portable)
