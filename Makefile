@@ -1,10 +1,10 @@
 OUTPUT := ./
+CURL := curl -L -o
 
 COMPANY_NAME ?= onlyoffice
 PRODUCT_NAME ?= documentbuilder
 PRODUCT_VERSION ?= 0.0.0
 
-LICENSE ?= commercial
 PACKAGE_EDITION ?= normal
 
 ifeq ($(OS),Windows_NT)
@@ -37,11 +37,7 @@ TARGET := $(PLATFORM)_$(ARCHITECTURE)
 BINARY_FILES += core/build/lib/$(TARGET)/$(LIB_PREFFIX)graphics$(SHARED_EXT)
 BINARY_FILES += core/build/lib/$(TARGET)/$(LIB_PREFFIX)kernel$(SHARED_EXT)
 BINARY_FILES += core/build/lib/$(TARGET)/$(LIB_PREFFIX)DjVuFile$(SHARED_EXT)
-ifeq ($(LICENSE),commercial)
-BINARY_FILES += core/build/lib/$(TARGET)/docbuilder/$(LIB_PREFFIX)doctrenderer$(SHARED_EXT)
-else
 BINARY_FILES += core/build/lib/$(TARGET)/$(LIB_PREFFIX)doctrenderer$(SHARED_EXT)
-endif
 BINARY_FILES += core/build/lib/$(TARGET)/$(LIB_PREFFIX)HtmlFile$(SHARED_EXT)
 BINARY_FILES += core/build/lib/$(TARGET)/$(LIB_PREFFIX)HtmlRenderer$(SHARED_EXT)
 BINARY_FILES += core/build/lib/$(TARGET)/$(LIB_PREFFIX)PdfReader$(SHARED_EXT)
@@ -57,15 +53,11 @@ endif
 ifeq ($(PLATFORM),win)
 BINARY_FILES += core/Common/3dParty/icu/$(TARGET)/build/icudt*$(SHARED_EXT)
 BINARY_FILES += core/Common/3dParty/icu/$(TARGET)/build/icuuc*$(SHARED_EXT)
-BINARY_FILES += core/Common/3dParty/v8/$(TARGET)/release/icudt.dll
+BINARY_FILES += core/Common/3dParty/v8/v8/out.gn/$(TARGET)/release/icudtl.dat
 endif
 
 BINARY_FILES += core/build/bin/$(TARGET)/x2t$(EXEC_EXT)
 BINARY_FILES += core/build/bin/$(TARGET)/docbuilder$(EXEC_EXT)
-
-ifeq ($(LICENSE),commercial)
-#BINARY_FILES += core/build/bin/$(TARGET)/registration$(EXEC_EXT)
-endif
 
 BINARY_FILES += DoctRenderer.config
 
@@ -86,18 +78,20 @@ XREGEXP += web-apps/deploy/web-apps/vendor/xregexp
 INCLUDE_FILES += core/DesktopEditor/doctrenderer/docbuilder.h
 INCLUDE_FILES += core/DesktopEditor/common/base_export.h
 
-WRAPPERS_FILES += core/build/lib/$(TARGET)/docbuilder.com.dll
-WRAPPERS_FILES += core/build/lib/$(TARGET)/docbuilder.net.dll
+DOCBUILDER_COM := core/build/lib/$(TARGET)/docbuilder.com.dll
+DOCBUILDER_NET := core/build/lib/$(TARGET)/docbuilder.net.dll
 
 .PHONY: all install uninstall
+
+$(DOCBUILDER_COM):
+	$(CURL) $(DOCBUILDER_COM) http://d2ettrnqo7v976.cloudfront.net/wrappers/$(TARGET)/docbuilder.com.dll
+	
+$(DOCBUILDER_NET):
+	$(CURL) $(DOCBUILDER_NET) http://d2ettrnqo7v976.cloudfront.net/wrappers/$(TARGET)/docbuilder.net.dll
 
 all:
 	cd core/Common/3dParty/ && ./make.sh
 	cd core && $(MAKE) all ext
-
-ifeq ($(LICENSE),commercial)
-	cd core-ext && $(MAKE)
-endif
 
 	cd sdkjs && $(MAKE)
 	
@@ -106,7 +100,7 @@ clean:
 	cd core-ext && $(MAKE) clean
 	cd sdkjs &&  $(MAKE) clean
 
-install:
+install: $(DOCBUILDER_COM) $(DOCBUILDER_NET)
 	mkdir -p $(DEST_DIR)
 	cp -t $(DEST_DIR) $(BINARY_FILES)
 ifneq ($(PLATFORM),mac)
@@ -120,7 +114,7 @@ endif
 	cp -t $(DEST_DIR)/include $(INCLUDE_FILES)
 ifeq ($(PLATFORM),win)
 	mkdir -p $(DEST_DIR)/wrappers
-	cp -t $(DEST_DIR)/wrappers $(WRAPPERS_FILES)
+	cp -t $(DEST_DIR)/wrappers $(DOCBUILDER_COM) $(DOCBUILDER_NET)
 endif
 
 ifeq ($(PACKAGE_EDITION),portable)
