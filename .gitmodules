@@ -4,15 +4,6 @@
 [submodule "sdkjs"]
 	path = sdkjs
 	url = https://github.com/ONLYOFFICE/sdkjs.git
-[submodule "web-apps"]
-	path = web-apps
-	url = https://github.com/ONLYOFFICE/web-apps.git
-[submodule "core-ext"]
-	path = core-ext
-	url = https://github.com/ONLYOFFICE/core-ext.git
 [submodule "desktop-sdk"]
 	path = desktop-sdk
 	url = https://github.com/ONLYOFFICE/desktop-sdk.git
-[submodule "document-builder-package"]
-	path = document-builder-package
-	url = https://github.com/ONLYOFFICE/document-builder-package.git
