@@ -1,0 +1,21 @@
+builder.OpenFile("./TESTFILES/MailMergeData.xlsx", "");
+
+GlobalVariable["MailMergeData"] = Api.GetMailMergeData(0);
+
+builder.CloseFile();
+
+builder.OpenFile("./TESTFILES/sample8.docx", "");
+
+Api.LoadMailMergeData(GlobalVariable["MailMergeData"]);
+
+var oTemplateDocContent = Api.GetMailMergeTemplateDocContent();
+var ReceptionsCount     = Api.GetMailMergeReceptionsCount();
+
+for (var nReception = 0; nReception < ReceptionsCount; nReception++) 
+{
+	Api.MailMerge(nReception, nReception);
+	builderJS.SaveFile(65, "./TESTFILES/MailMergeSamples/" + nReception + ".docx");
+	Api.ReplaceDocumentContent(oTemplateDocContent);
+}
+
+builder.CloseFile();

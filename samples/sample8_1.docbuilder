@@ -1,0 +1,13 @@
+builder.OpenFile("https://nct.onlyoffice.com/sh/XY4", "");
+
+GlobalVariable["MailMergeData"] = Api.GetMailMergeData(0);
+
+builder.CloseFile();
+
+builder.OpenFile("./TESTFILES/sample8.docx", "");
+
+Api.LoadMailMergeData(GlobalVariable["MailMergeData"]);
+Api.MailMerge();
+
+builderJS.SaveFile(65, "./TESTFILES/MailMergeSamples/MailMergeSample.docx");
+builder.CloseFile();
