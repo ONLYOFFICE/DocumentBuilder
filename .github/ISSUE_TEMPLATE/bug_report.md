@@ -18,3 +18,7 @@ hasn't been reported (and potentially fixed) already.*
 **Steps to reproduce the problem**:
 
 **DocumentBuilder version**:
+
+**Installation method**:
+
+**Operating system**:
