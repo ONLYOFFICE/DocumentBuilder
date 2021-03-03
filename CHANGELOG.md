@@ -4,10 +4,10 @@
 
 ### Changes
 
-* Actualize all script file to current stable version
+* Actualize all script files to current stable version
 
 ## 6.0.0
 
 ### Changes
 
-* Actualize all script file to current stable version
+* Actualize all script files to current stable version
