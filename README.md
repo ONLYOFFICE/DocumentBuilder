@@ -1,6 +1,6 @@
 ## Overview
 
-ONLYOFFICE Document Builder allows you to build docs easily without running an actual edutor. It also allows the developers to automate document building using the templates. 
+ONLYOFFICE Document Builder allows you to build docs easily without running an actual editor. It also allows the developers to automate document building using the templates. 
 
 Document Builder has all the features of a common document editor but is lightweight and can be easily integrated into your document management system, CRM system, etc. 
 
