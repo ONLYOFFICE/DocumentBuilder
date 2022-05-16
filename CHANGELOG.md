@@ -1,5 +1,16 @@
 # Change log
 
+## 7.1.0
+
+### New Features
+
+* `arm64` linux versions of DocumentBuilder
+* Methods to work with Forms
+
+### Changes
+
+* Actualize all script files to current stable version
+
 ## 7.0.0
 
 ### Changes
