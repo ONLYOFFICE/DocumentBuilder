@@ -1,5 +1,11 @@
 # Change log
 
+## 7.1.1
+
+### Fixes
+
+* Fix generating PDF with `Api.CreateImage` call with url (Bug #48473)
+
 ## 7.1.0
 
 ### New Features
