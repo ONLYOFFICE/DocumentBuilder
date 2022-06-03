@@ -1,6 +1,0 @@
-builder.OpenFile("./TESTFILES/sample1.docx", "");
-var oDocument     = Api.GetDocument();
-oDocument.InsertWatermark("WATERMARK", true);
-builder.SaveFile("docx", "./TESTFILES/sample7.docx");
-builder.SaveFile("pdf", "./TESTFILES/sample7.pdf");
-builder.CloseFile();

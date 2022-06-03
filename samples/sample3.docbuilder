@@ -1,3 +1,0 @@
-builder.OpenFile("TESTFILES/sample1.docx", "");
-builder.SaveFile("pdf", "./TESTFILES/sample3.pdf");
-builder.CloseFile();
