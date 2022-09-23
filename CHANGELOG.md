@@ -1,5 +1,12 @@
 # Change log
 
+## 7.2.0
+
+### New Features
+
+* Dozens of new methods for different objects.
+  More detailed list at [here](https://api.onlyoffice.com/docbuilder/changelog)
+
 ## 7.1.1
 
 ### Fixes
