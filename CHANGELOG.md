@@ -8,7 +8,7 @@
 ## 7.3.3
 
 * A lot of new methods for different objects.
-  More details in the documentation [here](https://api.onlyoffice.com/editors/changelog#73)
+  More details in the documentation [here](https://api.onlyoffice.com/docbuilder/changelog#73)
 * Fix several vulnerabilities with memory exhaustion during work with `NativeEngine` function (Bug #60433)
 
 ## 7.2.0
