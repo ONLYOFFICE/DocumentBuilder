@@ -1,5 +1,10 @@
 # Change log
 
+## 7.4.0
+
+* A lot of new methods for different objects.
+* More details in the documentation [here](https://api.onlyoffice.com/docbuilder/changelog#74)
+
 ## 7.3.3
 
 * A lot of new methods for different objects.
