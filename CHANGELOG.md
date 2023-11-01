@@ -1,6 +1,38 @@
 # Change log
 
+## 7.5.0
+
+### Methods of combo box / dropdown list content control
+
+* Added the **ApiBlockLvlSdt/GetDropdownList** method to Text document API.
+* Added the **ApiContentControlList** class to Text document API.
+* Added the **ApiContentControlList/Add** method to Text document API.
+* etc.
+
+### Watermark methods
+
+* Added the **ApiDocument/GetWatermarkSettings** method to Text document API.
+* Added the **ApiDocument/RemoveWatermark method** to Text document API.
+* Added the **ApiDocument/SetWatermarkSettings** method to Text document API.
+* etc.
+
+### Global
+
+* Added the **SearchData** object to Global type definitions.
+* Added the **ReplaceData** object to Global type definitions.
+
+### Slide methods
+
+* Added the ApiSlide/GetVisible method to Presentation API.
+* Added the ApiSlide/SetVisible method to Presentation API.
+
+[Full list of changes on the ONLYOFFICE documentation](https://api.onlyoffice.com/docbuilder/changelog#75)
+
 ## 7.4.0
+
+### Slide methods
+
+* Accessing a cell by index **oWorksheet.GetCells(0, 0);** has been deprecated. `Bug #59741`
 
 * A lot of new methods for different objects.
 * More details in the documentation [here](https://api.onlyoffice.com/docbuilder/changelog#74)
