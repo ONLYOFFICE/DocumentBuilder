@@ -1,5 +1,27 @@
 # Change log
 
+## 8.0.0
+
+### Security
+
+* Fixed the ability to add third-party images to a document when executing a script through Document Builder.
+* Fixed Heap Buffer Overflow in the "WriteString" method in the "core/DesktopEditor/fontengine/MemoryStream.h" file.
+* Fixed the **CZipEmbed::open** and **CZipEmbed::addFile** methods which allow writing data to a file for an arbitrary directory.
+
+### Document editor
+
+* Added the sUserId parameter for methods that add objects to the document.
+* Added methods for determining page width and height.
+* Added a method for setting Drawing directly through an object of the **ApiDocument** class: **AddDrawingToPage**
+* Added methods for easy installation of forms into a document. **SetFormsData**, **GetFormsData**.
+* The **ApiBullet** class has been removed. Working with numbered lists is performed through objects of the **ApiNumbering** class.
+
+### Spreadsheet editor
+
+* Added a class and methods for working with the Freeze Panes feature. **ApiFreezePanes**
+* Added a class for working with characters in objects containing text. **ApiCharacters**.
+* The classes representing interaction with comments and responses to comments have been improved. **ApiComment**, **ApiCommentReply**.
+
 ## 7.5.0
 
 ### Methods of combo box / dropdown list content control
