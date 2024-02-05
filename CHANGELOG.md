@@ -1,6 +1,60 @@
 # Change log
 
+## 8.0.0
+
+### Security
+
+* Fixed the ability to add third-party images to a document when executing a script through Document Builder.
+* Fixed Heap Buffer Overflow in the "WriteString" method in the "core/DesktopEditor/fontengine/MemoryStream.h" file.
+* Fixed the **CZipEmbed::open** and **CZipEmbed::addFile** methods which allow writing data to a file for an arbitrary directory.
+
+### Document editor
+
+* Added the sUserId parameter for methods that add objects to the document.
+* Added methods for determining page width and height.
+* Added a method for setting Drawing directly through an object of the **ApiDocument** class: **AddDrawingToPage**
+* Added methods for easy installation of forms into a document. **SetFormsData**, **GetFormsData**.
+* The **ApiBullet** class has been removed. Working with numbered lists is performed through objects of the **ApiNumbering** class.
+
+### Spreadsheet editor
+
+* Added a class and methods for working with the Freeze Panes feature. **ApiFreezePanes**
+* Added a class for working with characters in objects containing text. **ApiCharacters**.
+* The classes representing interaction with comments and responses to comments have been improved. **ApiComment**, **ApiCommentReply**.
+
+## 7.5.0
+
+### Methods of combo box / dropdown list content control
+
+* Added the **ApiBlockLvlSdt/GetDropdownList** method to Text document API.
+* Added the **ApiContentControlList** class to Text document API.
+* Added the **ApiContentControlList/Add** method to Text document API.
+* etc.
+
+### Watermark methods
+
+* Added the **ApiDocument/GetWatermarkSettings** method to Text document API.
+* Added the **ApiDocument/RemoveWatermark method** to Text document API.
+* Added the **ApiDocument/SetWatermarkSettings** method to Text document API.
+* etc.
+
+### Global
+
+* Added the **SearchData** object to Global type definitions.
+* Added the **ReplaceData** object to Global type definitions.
+
+### Slide methods
+
+* Added the ApiSlide/GetVisible method to Presentation API.
+* Added the ApiSlide/SetVisible method to Presentation API.
+
+[Full list of changes on the ONLYOFFICE documentation](https://api.onlyoffice.com/docbuilder/changelog#75)
+
 ## 7.4.0
+
+### Slide methods
+
+* Accessing a cell by index **oWorksheet.GetCells(0, 0);** has been deprecated. `Bug #59741`
 
 * A lot of new methods for different objects.
 * More details in the documentation [here](https://api.onlyoffice.com/docbuilder/changelog#74)
