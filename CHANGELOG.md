@@ -1,5 +1,29 @@
 # Change log
 
+## 8.1.0
+
+### Security
+
+* Fixed the ability to read data from memory when executing scripts via documentbuilder
+
+### Document editor
+
+* `ApiDateForm` class
+* Methods for setting text properties
+* Methods for moving a cursor
+* RGB color methods
+* Added the `nWidth`and `nHeight` parameters to the ApiPictureForm/SetImage method of Text document API.
+
+### Spreadsheet editor
+
+* Expanding the list of Worksheet functions
+* Protected range methods
+* Reference style methods
+* Methods for pasting / cutting ranges
+* Custom function
+
+[Full list of changes on the ONLYOFFICE documentation](https://api.onlyoffice.com/officeapi/changelog#81)
+
 ## 8.0.0
 
 ### Security
