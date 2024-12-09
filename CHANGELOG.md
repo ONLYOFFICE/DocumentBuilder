@@ -1,5 +1,46 @@
 # Change log
 
+## 8.2.0
+
+### New features
+
+#### Security
+
+* Fixed the vulnerability allows using a C++ method if you assign a JavaScript
+  object as a property of another object
+* Fixed the issue with running a JavaScript method that has been assigned from
+  another object
+
+#### Docbuilder
+
+* Major optimizations and speed up calculations (Linux)
+* Implemented the method of tracking the cursor position in the document
+  and moving to the element
+* Implemented the `IsBool()` method for `CDocBuilderValue` in PythonWrapper
+* Allow the use of Argument[""] as a parameter for `builder.OpenFile()` and
+  `builderJS.OpenFile()`
+
+#### Document editor
+
+* Changing the logic of the Range object: now each new Run object
+  in the range adds one unit to the Range instead of calculating
+  by the number of characters
+* Added the methods for updating objects containing links/hyperlinks
+  in the document
+
+#### Spreadsheet editor
+
+* The custom function is now available after reloading the editor page
+
+### Fixes
+
+* Fixed non-informative error when sending a request to the DocumentServer
+  with a script in the body
+* Fixed the crashing when calling the `ApiRange` `method.Delete`
+* Fixed the updating the table of contents when calling `UpdateAllTOC`
+
+[Full list of changes on the ONLYOFFICE documentation](https://api.onlyoffice.com/officeapi/changelog#82)
+
 ## 8.1.0
 
 ### Security
