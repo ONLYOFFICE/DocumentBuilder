@@ -39,7 +39,7 @@
 * Fixed the crashing when calling the `ApiRange` `method.Delete`
 * Fixed the updating the table of contents when calling `UpdateAllTOC`
 
-[Full list of changes on the ONLYOFFICE documentation](https://api.onlyoffice.com/officeapi/changelog#82)
+[Full list of changes on the ONLYOFFICE documentation](https://api.onlyoffice.com/docs/office-api/more-information/changelog/#version-82)
 
 ## 8.1.0
 
@@ -63,7 +63,7 @@
 * Methods for pasting / cutting ranges
 * Custom function
 
-[Full list of changes on the ONLYOFFICE documentation](https://api.onlyoffice.com/officeapi/changelog#81)
+[Full list of changes on the ONLYOFFICE documentation](https://api.onlyoffice.com/docs/office-api/more-information/changelog/#version-81)
 
 ## 8.0.0
 
@@ -113,7 +113,7 @@
 * Added the ApiSlide/GetVisible method to Presentation API.
 * Added the ApiSlide/SetVisible method to Presentation API.
 
-[Full list of changes on the ONLYOFFICE documentation](https://api.onlyoffice.com/docbuilder/changelog#75)
+[Full list of changes on the ONLYOFFICE documentation](https://api.onlyoffice.com/docs/office-api/more-information/changelog/#version-75)
 
 ## 7.4.0
 
@@ -122,12 +122,12 @@
 * Accessing a cell by index **oWorksheet.GetCells(0, 0);** has been deprecated. `Bug #59741`
 
 * A lot of new methods for different objects.
-* More details in the documentation [here](https://api.onlyoffice.com/docbuilder/changelog#74)
+* More details in the documentation [here](https://api.onlyoffice.com/docs/office-api/more-information/changelog/#version-74)
 
 ## 7.3.3
 
 * A lot of new methods for different objects.
-  More details in the documentation [here](https://api.onlyoffice.com/docbuilder/changelog#73)
+  More details in the documentation [here](https://api.onlyoffice.com/docs/office-api/more-information/changelog/#version-73)
 * Fix the application vulnerability CVE-2023-30186 with memory exhaustion
   during work with `NativeEngine` function (Bug #60433)
 
@@ -136,7 +136,7 @@
 ### New Features
 
 * Dozens of new methods for different objects.
-  More detailed list at [here](https://api.onlyoffice.com/docbuilder/changelog)
+  More detailed list at [here](https://api.onlyoffice.com/docs/office-api/more-information/changelog/#version-72)
 
 ## 7.1.1
 
