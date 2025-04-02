@@ -1,5 +1,26 @@
 # Change log
 
+## 8.3.2
+
+### New features
+
+* Providing Python libraries instead of installation packages
+
+### Fixes
+
+* Fixed `NSInvalidArgumentException` error when running the script on macOS
+* Fixed `cannot open shared object file` error when running the script on Linux
+
+[Full list of changes on the ONLYOFFICE documentation](https://api.onlyoffice.com/docs/office-api/more-information/changelog/#version-83)
+
+## 8.3.1
+
+### No public release
+
+## 8.3.0
+
+### No public release
+
 ## 8.2.0
 
 ### New features
