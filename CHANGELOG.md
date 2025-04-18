@@ -2,6 +2,13 @@
 
 ## 8.3.2
 
+### Fixes
+
+* Fixed `save file error` when running the script on Windows x86
+* Fixed reading of license file in some cases
+
+## 8.3.2
+
 ### New features
 
 * Providing Python libraries instead of installation packages
