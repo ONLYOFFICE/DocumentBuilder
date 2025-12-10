@@ -1,5 +1,9 @@
 # Change log
 
+## 9.0.4
+
+[Full list of changes on the ONLYOFFICE documentation](https://api.onlyoffice.com/docs/office-api/more-information/changelog/#version-90)
+
 ## 8.3.3
 
 ### Fixes
