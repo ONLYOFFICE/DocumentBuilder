@@ -1,5 +1,13 @@
 # Change log
 
+## 9.2.0
+
+[Full list of changes on the ONLYOFFICE documentation](https://api.onlyoffice.com/docs/office-api/more-information/changelog/#version-92)
+
+## 9.1.0
+
+### No public release
+
 ## 9.0.4
 
 [Full list of changes on the ONLYOFFICE documentation](https://api.onlyoffice.com/docs/office-api/more-information/changelog/#version-90)
