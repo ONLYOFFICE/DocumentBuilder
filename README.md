@@ -6,10 +6,10 @@ Document Builder has all the features of a common document editor but is lightwe
 
 ## Project information
 
-Official website: [https://www.onlyoffice.com/document-builder.aspx](https://www.onlyoffice.com/document-builder.aspx?utm_source=github&utm_medium=cpc&utm_campaign=GitHubBuilder)
+Official website: [https://www.onlyoffice.com/document-builder.aspx](https://www.onlyoffice.com/document-builder.aspx?utm_source=github&utm_medium=cpc&utm_campaign=GitHubBuilder)
 
-Code repository: https://github.com/ONLYOFFICE/DocumentBuilder
+Code repository: https://github.com/ONLYOFFICE/DocumentBuilder
 
-Document Builder API https://api.onlyoffice.com/docbuilder/basic
+Document Builder API https://api.onlyoffice.com/docs/document-builder/get-started/overview/
 
 ONLYOFFICE Document Builder is dual-licensed. For commercial use, contact sales@onlyoffice.com
