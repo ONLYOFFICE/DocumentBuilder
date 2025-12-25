@@ -1,6 +1,15 @@
 # Change log
 
+## 9.2.1
+
+* Actualize all script files to current stable version
+
 ## 9.2.0
+
+### Fixes
+
+* Fixed vulnerability allowing access to system files using native functions
+  ([DocumentBuilder#147](https://github.com/ONLYOFFICE/DocumentBuilder/issues/147))
 
 [Full list of changes on the ONLYOFFICE documentation](https://api.onlyoffice.com/docs/office-api/more-information/changelog/#version-92)
 
