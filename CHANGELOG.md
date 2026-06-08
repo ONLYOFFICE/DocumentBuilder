@@ -1,5 +1,13 @@
 # Change log
 
+## 9.4.0
+
+[Full list of changes on the ONLYOFFICE documentation](https://api.onlyoffice.com/docs/office-api/more-information/changelog/#version-94)
+
+## 9.3.0
+
+[Full list of changes on the ONLYOFFICE documentation](https://api.onlyoffice.com/docs/office-api/more-information/changelog/#version-93)
+
 ## 9.2.1
 
 * Actualize all script files to current stable version
